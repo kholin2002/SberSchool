@@ -11,7 +11,7 @@ public class FileConverter {
 
     public static void Convert(Reader in, Writer out, CharConverter c) throws IOException {
         int nextChar = in.read();
-        while (nextChar > 0) {
+        while (nextChar >= 0) {
             out.write(c.convert(nextChar));
             nextChar = in.read();
         }
