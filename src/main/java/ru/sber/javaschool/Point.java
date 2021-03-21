@@ -19,7 +19,7 @@ public class Point {
     /**
     * Расстояние от точки до начала координат
     */
-    public double distanceFromStart() {
+    public double getDistanceFromStart() {
         Point sqr = this.multi(this);
         return Math.sqrt(sqr.x + sqr.y);
     }
@@ -27,9 +27,9 @@ public class Point {
     /**
      * Найти расстояние между двумя точками
      */
-    public double distanceFrom(Point otherPoint) {
+    public double getDistanceFrom(Point otherPoint) {
         Point delta = this.diff(otherPoint);
-        return delta.distanceFromStart();
+        return delta.getDistanceFromStart();
     }
 
     /**
