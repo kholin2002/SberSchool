@@ -40,28 +40,28 @@ public class Point {
     }
 
     /**
-     * Сложить координаты
+     * Попарно сложить координаты
      */
     private Point sum(Point otherPoint) {
         return new Point(this.x + otherPoint.x, this.y + otherPoint.y);
     }
 
     /**
-     * Вычесть координаты
+     * Попарно вычесть координаты
      */
     private Point diff(Point otherPoint) {
         return new Point(this.x - otherPoint.x, this.y - otherPoint.y);
     }
 
     /**
-     * Перемножить координаты
+     * Попарно перемножить координаты
      */
     private Point multi(Point otherPoint) {
         return new Point(this.x * otherPoint.x, this.y * otherPoint.y);
     }
 
     /**
-     * Разделить координаты
+     * Попарно разделить координаты
      */
     private Point div(Point otherPoint) {
         return new Point(this.x / otherPoint.x, this.y / otherPoint.y);
