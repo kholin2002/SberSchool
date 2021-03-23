@@ -18,17 +18,10 @@ public class FileConverter {
     }
 
     public static void convert(String inFileName, String outFileName, CharConverter c) throws IOException {
-        try (FileReader in = new FileReader(inFileName)) {
-            try (FileWriter out = new FileWriter(outFileName)) {
-                convert(in, out, c);
-            }
-        }
-    }
-
-    public static void convertBuffered(String inFileName, String outFileName, CharConverter c) throws IOException {
         try (BufferedReader in = new BufferedReader(new FileReader(inFileName))) {
             try (BufferedWriter out = new BufferedWriter(new FileWriter(outFileName))) {
                 convert(in, out, c);
+                out.flush();
             }
         }
     }
