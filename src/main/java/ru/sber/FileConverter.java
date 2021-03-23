@@ -17,9 +17,9 @@ public class FileConverter {
         }
     }
 
-    public static void convert(String inFileName, String outFileName, int bufferSize, CharConverter converter) throws IOException {
-        try (BufferedReader in = new BufferedReader(new FileReader(inFileName), bufferSize)) {
-            try (BufferedWriter out = new BufferedWriter(new FileWriter(outFileName), bufferSize)) {
+    public static void convert(String inFileName, String outFileName, CharConverter converter) throws IOException {
+        try (BufferedReader in = new BufferedReader(new FileReader(inFileName))) {
+            try (BufferedWriter out = new BufferedWriter(new FileWriter(outFileName))) {
                 convert(in, out, converter);
                 out.flush();
             }

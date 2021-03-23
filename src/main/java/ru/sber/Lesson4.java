@@ -14,7 +14,7 @@ public class Lesson4 {
         Date dateStart = new Date();
         System.out.printf("%1$tT.%1$tL Converting file \"%2$s\" to \"%3$s\"\n", dateStart, fileNameIn, fileNameOut);
 
-        FileConverter.convert(fileNameIn, fileNameOut, 1024, (chr) -> chr == '0' ? ' ' : chr);
+        FileConverter.convert(fileNameIn, fileNameOut, (chr) -> chr == '0' ? ' ' : chr);
 
         Date dateStop = new Date();
         System.out.printf("%1$tT.%1$tL Done.\nExecution time (ms): %2$d\n", dateStop, dateStop.getTime() - dateStart.getTime());
